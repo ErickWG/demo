@@ -20,13 +20,15 @@ public class MaterialesReciService {
     public MaterialesReciService(MaterialRepo materialRepo) {
         this.materialRepo = materialRepo;
     }
+}
 
-    public MaterialesReci materialesReci(String nombreMaterial){
+
+/*    public MaterialesReci materialesReci(String nombreMaterial){
         List<Material> materials=materialRepo.findAll();
         MaterialesReci material;
         material=new MaterialesReci();
         for (Material m:materials){
-            if (Objects.equals(nombreMaterial, m.getNombreMaterial())){
+            if (Objects.equals(nombreMaterial, m.getNombreMaterial()) && m.getEs_reciclable()){
                 material.setNombreMaterial(m.getNombreMaterial());
                 material.setDetalleMaterial(m.getDetalleMaterial());
                 material.setPrecio(m.getPrecio());
@@ -37,14 +39,14 @@ public class MaterialesReciService {
             }
         }
         return material;
-    }
-    public List<MaterialesReci> lsmaterialesReci(){
+    }*/
+/*    public List<MaterialesReci> lsmaterialesReci(){
         List<Material> materials=materialRepo.findAll();
         MaterialesReci material;
         List<MaterialesReci> lista=new ArrayList<>();
 
         for (Material m:materials){
-                if (m.getCentroReciclaje()!=null){
+                if (m.getCentroReciclaje()!=null && m.getEs_reciclable()){
                     material=new MaterialesReci();
                     material.setNombreMaterial(m.getNombreMaterial());
                     material.setDetalleMaterial(m.getDetalleMaterial());
@@ -59,4 +61,4 @@ public class MaterialesReciService {
         }
         return lista;
     }
-}
+}*/

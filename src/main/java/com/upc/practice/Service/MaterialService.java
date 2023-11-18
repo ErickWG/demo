@@ -23,19 +23,15 @@ public class MaterialService {
     //Listar
     public List<Material> lsMaterial(){ return materialRepo.findAll();}
 
-    //Buscar por id
-    public Material listaporId(Long id){
-        return materialRepo.findById(id).orElseThrow(()->new OpenApiResourceNotFoundException(("No existe registro con ese ID = "+id)));
-    }
     //Buscar Precio por Nombre
     public Material listarPorNombre(String nombreM){
         return materialRepo.findByNombreMaterial(nombreM);
     }
+
     //modificar
-    public Material modifica (Long id, Material material) throws Exception{
-        Material m= materialRepo.findById(id).orElseThrow(()->new OpenApiResourceNotFoundException(("No se encontro el ID" + id)));
-        m.setNombreMaterial(material.getNombreMaterial());
-        m.setDetalleMaterial(material.getDetalleMaterial());
+    public Material modifica (Material material) throws Exception{
+        Material mat= materialRepo.findById(material.getIdMaterial())
+                .orElseThrow(() -> new OpenApiResourceNotFoundException("Id de material no existe"));
         return materialRepo.save(material);
     }
 

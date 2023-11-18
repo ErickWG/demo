@@ -1,5 +1,6 @@
 package com.upc.practice.Service;
 
+import com.upc.practice.Model.Material;
 import com.upc.practice.Model.Producto;
 import com.upc.practice.Repository.ProductoRepo;
 import org.springdoc.api.OpenApiResourceNotFoundException;
@@ -29,4 +30,9 @@ public class ProductoService {
         return productoRepo.findByPrecioProductoBetween(precioMin,precioMax);
     }
     public Map<String,Long>ContarProductosPorEmpresa(Long empresa_id){return productoRepo.ContarProductosPorEmpresa(empresa_id);}
+    public Producto eliminar(Long id) throws Exception{
+        Producto p=productoRepo.findById(id).orElseThrow(()->new OpenApiResourceNotFoundException("No se encontro el ID" + id));
+        productoRepo.delete(p);
+        return p;
+    }
 }
