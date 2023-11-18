@@ -23,5 +23,5 @@ public class DetalleVenta {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    private Producto producto;
+    private Producto producto; //ola
 }
