@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://utopian-change-d4cea.web.app")
 
 public class SecurityController {
     private final AuthService authService;
