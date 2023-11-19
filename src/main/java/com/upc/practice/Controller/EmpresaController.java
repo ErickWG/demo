@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "https://utopian-change-d4cea.web.app")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/empresa")
 
 public class  EmpresaController {

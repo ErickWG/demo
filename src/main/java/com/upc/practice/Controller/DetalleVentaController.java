@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/DetalleVenta")
-@CrossOrigin(origins = "https://utopian-change-d4cea.web.app")
+@CrossOrigin(origins = "http://localhost:4200")
 
 public class DetalleVentaController {
     public final DetalleVentaService detalleVentaService;

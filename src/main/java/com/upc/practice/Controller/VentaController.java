@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/venta")
-@CrossOrigin(origins = "https://utopian-change-d4cea.web.app")
+@CrossOrigin(origins = "http://localhost:4200")
 
 public class VentaController {
     @Autowired
