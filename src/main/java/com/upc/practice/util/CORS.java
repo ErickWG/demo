@@ -26,6 +26,7 @@ public class CORS implements Filter {
     HttpServletRequest request = (HttpServletRequest) req;
 
     response.setHeader("Access-Control-Allow-Origin", "*");
+    response.setHeader("Access-Control-Allow-Origin", "https://utopian-change-d4cea.web.app");
     response.setHeader("Access-Control-Allow-Methods", "DELETE, GET, OPTIONS, PATCH, POST, PUT");
     response.setHeader("Access-Control-Max-Age", "3600");
     response.setHeader("Access-Control-Allow-Headers",
